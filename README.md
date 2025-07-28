@@ -40,14 +40,23 @@ pip install torch torchvision torchaudio
 
 6. Install OpenArm pick up task
 ```bash
-git clone XXXXXXX
-cp
+git clone https://github.com/enactic/openarm_maniskill_simulation.git
+# copy openarm assets
+cp -r ~/openarm_maniskill/urdf ~/ManiSkill/mani_skill/assets/robots/openarm
+
+# copy agents(robot)
+cp ~/openarm_maniskill/mani_skill/agents/robots/__init__.py ~/ManiSkill/mani_skill/agents/robots
+cp -r ~/openarm_maniskill/mani_skill/agents/robots/openarm ~/ManiSkill/mani_skill/agents/robots
+
+# copy task (pick cube)
+cp ~/openarm_maniskill/mani_skill/envs/tasks/tabletop/pick_cube.py ~/ManiSkill/mani_skill/envs/tasks/tabletop
+cp ~/openarm_maniskill/mani_skill/envs/tasks/tabletop/pick_cube_cfgs.py ~/ManiSkill/mani_skill/envs/tasks/tabletop
 ``` 
 
 ### Run Training
-The procedure for training to `pick up a cub`e` using the PPO algorithm is described below.
+The procedure for training to `pick up a cube` using the PPO algorithm is described below.
 
-| PickCube exapmple |
+| PickCube Simulation|
 | :--:|
 |<img src="mani_skill/envs/tasks/tabletop/movie/pickup_cube.gif" width=350px> |
 
