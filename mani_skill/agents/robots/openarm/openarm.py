@@ -12,21 +12,11 @@ from mani_skill.agents.registration import register_agent
 from mani_skill.utils import common, sapien_utils
 from mani_skill.utils.structs.actor import Actor
 
-try:
-    from utils import * 
-except:
-    from . utils import *
-    
+
 @register_agent()
 class OpenArm(BaseAgent):
-    # ManiSkill URDF
     uid = "openarm"
-    # urdf_path = "/home/h-ito/openarm_Isaac_description/urdf/openarm_v1_0.urdf"
-    _urdf_path = "/home/h-ito/ros2_ws/openarm_pickup.urdf"
-    urdf_path = "/tmp/openarm.urdf"
-    pkg_root = "/home/h-ito/ros2_ws/src/openarm_description"
-    replace_package(_urdf_path, urdf_path, pkg_root)
-    
+    urdf_path = f"{PACKAGE_ASSET_DIR}/robots/openarm/openarm.urdf"
     urdf_config = dict(
         _materials=dict(
             gripper=dict(static_friction=2, dynamic_friction=2, restitution=0.0)
