@@ -57,7 +57,7 @@ cp ~/openarm_maniskill_simulation//mani_skill/envs/tasks/tabletop/pick_cube_cfgs
 ### Run Training
 The procedure for training to `pick up a cube` using the PPO algorithm is described below.
 
-| PickCube Simulation|
+| PickCube Demo|
 | :--:|
 |<img src="mani_skill/envs/tasks/tabletop/movie/pickup_cube.gif" width=350px> |
 
