@@ -43,15 +43,15 @@ pip install torch torchvision torchaudio
 cd ~
 git clone https://github.com/enactic/openarm_maniskill_simulation.git
 # copy openarm assets
-cp -r ~/openarm_maniskill/urdf ~/ManiSkill/mani_skill/assets/robots/openarm
+cp -r ~/openarm_maniskill_simulation/urdf ~/ManiSkill/mani_skill/assets/robots/openarm
 
 # copy agents(robot)
-cp ~/openarm_maniskill/mani_skill/agents/robots/__init__.py ~/ManiSkill/mani_skill/agents/robots
-cp -r ~/openarm_maniskill/mani_skill/agents/robots/openarm ~/ManiSkill/mani_skill/agents/robots
+cp ~/openarm_maniskill_simulation/mani_skill/agents/robots/__init__.py ~/ManiSkill/mani_skill/agents/robots
+cp -r ~/openarm_maniskill_simulation/mani_skill/agents/robots/openarm ~/ManiSkill/mani_skill/agents/robots
 
 # copy task (pick cube)
-cp ~/openarm_maniskill/mani_skill/envs/tasks/tabletop/pick_cube.py ~/ManiSkill/mani_skill/envs/tasks/tabletop
-cp ~/openarm_maniskill/mani_skill/envs/tasks/tabletop/pick_cube_cfgs.py ~/ManiSkill/mani_skill/envs/tasks/tabletop
+cp ~/openarm_maniskill_simulation//mani_skill/envs/tasks/tabletop/pick_cube.py ~/ManiSkill/mani_skill/envs/tasks/tabletop
+cp ~/openarm_maniskill_simulation//mani_skill/envs/tasks/tabletop/pick_cube_cfgs.py ~/ManiSkill/mani_skill/envs/tasks/tabletop
 ``` 
 
 ### Run Training
