@@ -59,7 +59,7 @@ The procedure for training to `pick up a cube` using the PPO algorithm is descri
 
 | PickCube Demo|
 | :--:|
-|<img src="mani_skill/envs/tasks/tabletop/movie/pickup_cube.gif" width=350px> |
+|<img src="images/pickup_cube.gif" width=350px> |
 
 
 ```bash
