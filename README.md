@@ -35,7 +35,7 @@ git clone https://github.com/haosulab/ManiSkill.git
 5. Install Maniskill
 ```bash
 cd ManiSkill && pip install -e .
-pip install torch torchvision torchaudio
+pip install torch torchvision torchaudio tensorboard wandb
 ```
 
 6. Install OpenArm pick up task
