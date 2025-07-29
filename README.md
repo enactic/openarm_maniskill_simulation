@@ -40,6 +40,7 @@ pip install torch torchvision torchaudio
 
 6. Install OpenArm pick up task
 ```bash
+cd ~
 git clone https://github.com/enactic/openarm_maniskill_simulation.git
 # copy openarm assets
 cp -r ~/openarm_maniskill/urdf ~/ManiSkill/mani_skill/assets/robots/openarm
