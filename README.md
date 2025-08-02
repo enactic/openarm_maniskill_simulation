@@ -55,18 +55,22 @@ cp ~/openarm_maniskill_simulation//mani_skill/envs/tasks/tabletop/pick_cube_cfgs
 ``` 
 
 ### Run Training
-The procedure for training to `pick up a cube` using the PPO algorithm is described below.
+You can run different tasks.
+Replace <TASK_NAME> with one of the following available tasks:
 
-| PickCube Demo|
-| :--:|
-|<img src="images/pickup_cube.gif" width=350px> |
+
+| Task Description        | Task Name                      |  Demo                               |
+| ----------------------- | ------------------------------ | ----------------------------------- | 
+| Push the cube to the center of the target.　| `PushCube-v1` | <img src="images/push_cube.gif" width=250px>|
+| Pull the cube to the cente of the target. | `PullCube-v1` |  <img src="images/pull_cube.gif" width=250px> |
+| Pick up the cube and move it to the target position.　| `PickCube-v1` |  <img src="images/pick_cube.gif" width=250px> |
 
 
 ```bash
 cd ~/ManiSkill/examples/baselines/ppo/
 python ppo.py \
-	--env_id=PickCube-v1 \
-	--exp-name=PickCube-v1 \
+	--env_id=<Task Name> \
+	--exp-name=<Task Name> \
 	--num_envs=1024 \
 	--total_timesteps=12_000_000 \
 	--eval_freq=10 \
@@ -78,8 +82,8 @@ If you want to manage training logs with [Weights & Biases](https://wandb.ai/sit
 export WANDB_API_KEY=`your wandb api key`
 cd ~/ManiSkill/examples/baselines/ppo/
 python ppo.py \
-	--env_id=PickCube-v1 \
-	--exp-name=PickCube-v1 \
+	--env_id=<Task Name> \
+	--exp-name=<Task Name> \
 	--num_envs=1024 \
 	--total_timesteps=12_000_000 \
 	--eval_freq=10 \
@@ -90,16 +94,15 @@ python ppo.py \
 	--num_eval_envs 8
 ```
 
-
 ### Run evaluate
 How to evaluate a trained model.
 ```bash
 cd ~/ManiSkill/examples/baselines/ppo/
 python ppo.py \
-       --env_id=PickCube-v1 \
+       --env_id=<Task Name> \
        --evaluate \
        --checkpoint `your training model path`
-       --exp-name=PickCube-v1 \
+       --exp-name=<Task Name> \
        --num_eval_envs=1
 ```
 ```
