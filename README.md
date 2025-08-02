@@ -49,9 +49,11 @@ cp -r ~/openarm_maniskill_simulation/urdf ~/ManiSkill/mani_skill/assets/robots/o
 cp ~/openarm_maniskill_simulation/mani_skill/agents/robots/__init__.py ~/ManiSkill/mani_skill/agents/robots
 cp -r ~/openarm_maniskill_simulation/mani_skill/agents/robots/openarm ~/ManiSkill/mani_skill/agents/robots
 
-# copy task (pick cube)
+# copy task files
 cp ~/openarm_maniskill_simulation//mani_skill/envs/tasks/tabletop/pick_cube.py ~/ManiSkill/mani_skill/envs/tasks/tabletop
 cp ~/openarm_maniskill_simulation//mani_skill/envs/tasks/tabletop/pick_cube_cfgs.py ~/ManiSkill/mani_skill/envs/tasks/tabletop
+cp ~/openarm_maniskill_simulation//mani_skill/envs/tasks/tabletop/pull_cube.py ~/ManiSkill/mani_skill/envs/tasks/tabletop
+cp ~/openarm_maniskill_simulation//mani_skill/envs/tasks/tabletop/push_cube.py ~/ManiSkill/mani_skill/envs/tasks/tabletop
 ``` 
 
 ### Run Training
